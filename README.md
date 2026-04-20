@@ -73,29 +73,27 @@ Vehicle Classes:
 ## 📂 Project Structure
 
 Vehicle-Detection-and-Classification/
-│
-├── notebooks/
-│ └── Vehicle_Detection_and_Classification.ipynb
-│
-├── app/
-│ └── streamlit_app.py
-│
-├── models/
-│ ├── best_yolo_vehicle.pt
-│ └── vehicle_classifier_efficientnet_final.keras
-│
-├── sample_images/
-│ ├── sample1.jpg
-│ ├── sample2.jpg
-│ └── sample3.jpg
-│
-├── vehicle_dataset.yaml
-├── class_indices.json
-├── requirements.txt
-├── README.md
-└── .gitignore
 
+    ├── notebooks/
+    │   └── Vehicle_Detection_and_Classification.ipynb
 
+    ├── app/
+    │   └── streamlit_app.py
+
+    ├── models/
+    │   ├── best_yolo_vehicle.pt
+    │   └── vehicle_classifier_efficientnet_final.keras
+
+    ├── sample_images/
+    │   ├── sample1.jpg
+    │   ├── sample2.jpg
+    │   └── sample3.jpg
+
+    ├── vehicle_dataset.yaml
+    ├── class_indices.json
+    ├── requirements.txt
+    ├── README.md
+    └── .gitignore
 ---
 
 ## 📊 Dataset Information
@@ -151,22 +149,19 @@ Spark is used to:
 
 ## 🔄 Workflow Pipeline
 
-The system follows this pipeline:
-
-Dataset Loading
-↓
-Apache Spark Processing
-↓
-Annotation Conversion
-↓
-YOLOv8 Detection Training
-↓
-EfficientNet Classification Training
-↓
-Model Evaluation
-↓
-Streamlit Deployment
-
+Dataset Loading  
+        ↓  
+Apache Spark Processing  
+        ↓  
+Annotation Conversion  
+        ↓  
+YOLOv8 Detection Training  
+        ↓  
+EfficientNet Classification Training  
+        ↓  
+Model Evaluation  
+        ↓  
+Streamlit Deployment  
 
 ---
 
@@ -209,20 +204,20 @@ Vehicle 3 → BUS (Confidence: 0.96)
 ### Step 1 — Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Vehicle-Detection-Classification.git
+git clone https://github.com/DMInaam/Vehicle-Detection-Classification.git
 
 cd Vehicle-Detection-Classification
 ```
-### Step 2 — Install Dependencies
+### Step 2 — Install Dependencies Using:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Running the Streamlit App
 Run the following command:
-
+```bash
 streamlit run streamlit_app.py
-
+```
 The application will start locally.
 
 ### Public Deployment Using Ngrok
@@ -230,13 +225,13 @@ The application will start locally.
 Ngrok is used to generate a public URL.
 
 Example:
-
+```bash
 from pyngrok import ngrok
 
 public_url = ngrok.connect(8501)
 
 print(public_url)
-
+```
 This allows remote access to the Streamlit application.
 
 ---
@@ -253,22 +248,26 @@ This allows remote access to the Streamlit application.
 - Ngrok
 
 ---
-## Final Performance Summary
+## 📊 Final Performance Summary
 
 ### 🚘 Vehicle Detection (YOLOv8)
-Model: YOLOv8s
-Precision: 0.9585
-Recall: 0.9563
-mAP@0.5: 0.9894
-mAP@0.5–0.95: 0.8140  
+
+- **Model:** YOLOv8s  
+- **Precision:** 0.9585  
+- **Recall:** 0.9563  
+- **mAP@0.5:** 0.9894  
+- **mAP@0.5–0.95:** 0.8140  
+
+---
 
 ### 🚗 Vehicle Classification (EfficientNetB0)
-Model: EfficientNetB0
-Total Classes: 5
-Best Validation Accuracy: 94.25%
-Final Accuracy: 92%
-Macro F1-score: 0.92
-Weighted F1-score: 0.92
+
+- **Model:** EfficientNetB0  
+- **Total Classes:** 5  
+- **Best Validation Accuracy:** 94.25%  
+- **Final Accuracy:** 92%  
+- **Macro F1-score:** 0.92  
+- **Weighted F1-score:** 0.92  
 
 ----
 ## 🎯 Key Features
