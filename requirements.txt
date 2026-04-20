@@ -1,0 +1,28 @@
+# Deep Learning
+tensorflow==2.15.0
+
+# Object Detection
+ultralytics==8.2.0
+
+# Image Processing
+opencv-python==4.9.0.80
+Pillow==10.2.0
+numpy==1.26.4
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.2
+
+# Machine Learning Metrics
+scikit-learn==1.4.1
+
+# Web App Deployment
+streamlit==1.31.0
+pyngrok==7.0.5
+
+# Data Processing
+pandas==2.2.1
+
+# Big Data Processing
+pyspark==3.5.1
+findspark==2.0.1
