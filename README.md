@@ -7,16 +7,18 @@
 <br/>
 
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Google Colab](https://img.shields.io/badge/Google_Colab-T4_GPU-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
-[![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
+[![Keras](https://img.shields.io/badge/Keras-Deep_Learning-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=yolo&logoColor=black)](https://docs.ultralytics.com/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Apache Spark](https://img.shields.io/badge/Apache_Spark-3.x-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org/)
-[![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)](https://matplotlib.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![EfficientNet](https://img.shields.io/badge/EfficientNetB0-Transfer_Learning-8B5CF6?style=for-the-badge)](https://arxiv.org/abs/1905.11946)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![Apache Spark](https://img.shields.io/badge/Apache_Spark-Big_Data-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Ngrok](https://img.shields.io/badge/Ngrok-Tunnel-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)](https://ngrok.com/)
+[![NumPy](https://img.shields.io/badge/NumPy-Scientific-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Completed-2EA44F?style=for-the-badge)](https://github.com/DMInaam/Vehicle-Detection-and-Classification)
 [![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)](#-license)
 
@@ -117,6 +119,7 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 | Task | Object Detection |
 | Input Size | 640 × 640 |
 | Batch Size | 16 |
+| Epochs | 30 |
 | Format | PyTorch (`.pt`) |
 
 </td>
@@ -149,29 +152,15 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 <br/><br/>
 
-**Precision-Recall Curve**
+**Validation Predictions**
 
-<img src="results/BoxPR_curve.png" width="600" alt="Precision-Recall Curve"/>
+<img src="results/val_batch0_pred.jpg" width="750" alt="YOLOv8 Validation Predictions"/>
 
 <br/><br/>
 
 **Normalized Confusion Matrix**
 
 <img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix"/>
-
-<br/><br/>
-
-**Training Batch Sample**
-
-<img src="results/train_batch0.jpg" width="600" alt="Training Batch Sample"/>
-
-<br/><br/>
-
-**Validation — Ground Truth vs. Predictions**
-
-| Ground Truth | Predictions |
-|:------------:|:-----------:|
-| <img src="results/val_batch0_labels.jpg" width="400" alt="Val Batch 0 Labels"/> | <img src="results/val_batch0_pred.jpg" width="400" alt="Val Batch 0 Predictions"/> |
 
 </div>
 </details>
@@ -227,19 +216,19 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 <div align="center">
 
-**Training & Validation Accuracy**
+**Training & Validation Accuracy Curves**
 
-<img src="results/accuracy_curve.png" width="600" alt="Accuracy Curve"/>
-
-<br/><br/>
-
-**Training & Validation Loss**
-
-<img src="results/loss_curve.png" width="600" alt="Loss Curve"/>
+<img src="results/accuracy_curve.png" width="600" alt="Classification Accuracy Curve"/>
 
 <br/><br/>
 
-**Confusion Matrix**
+**Fine-Tuning Accuracy Improvement**
+
+<img src="results/finetune_accuracy.png" width="600" alt="Fine-Tuning Accuracy"/>
+
+<br/><br/>
+
+**Classification Confusion Matrix**
 
 <img src="results/confusion_matrix_efficientNet.png" width="500" alt="Classification Confusion Matrix"/>
 
@@ -355,6 +344,12 @@ This project utilizes two complementary datasets:
 
 <div align="center">
 
+**Dataset Label Statistics & Bounding Box Distribution**
+
+<img src="results/labels.jpg" width="750" alt="Dataset Label Statistics"/>
+
+<br/><br/>
+
 > 📥 **Dataset Source:** [Zenodo Vehicle Dataset](https://zenodo.org/records/14792742)
 
 </div>
@@ -370,6 +365,8 @@ Apache Spark provides distributed processing capabilities for handling large-sca
 - **⚡ Performance** — Significant speedup over sequential processing
 - **📈 Scalability** — Seamless handling of growing datasets
 
+> **Note:** The Apache Spark data preprocessing pipeline is integrated directly within the main Jupyter notebook.
+
 ---
 
 ## 🚀 Quick Start
@@ -377,6 +374,7 @@ Apache Spark provides distributed processing capabilities for handling large-sca
 ### Prerequisites
 
 - Python 3.10+
+- Java Development Kit (JDK 17) *(Required for Apache Spark)*
 - CUDA-compatible GPU *(recommended for training)*
 - Git
 
@@ -387,9 +385,11 @@ git clone https://github.com/DMInaam/Vehicle-Detection-and-Classification.git
 cd Vehicle-Detection-and-Classification
 ```
 
-### Step 2 — Install Dependencies
+### Step 2 — Environment Setup & Install Dependencies
 
 ```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -420,6 +420,7 @@ print(f"🔗 Public URL: {public_url}")
 | **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | **Deep Learning** | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white) |
 | **Object Detection** | ![YOLO](https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=yolo&logoColor=black) |
+| **Classification** | ![EfficientNet](https://img.shields.io/badge/EfficientNetB0-8B5CF6?style=flat-square) |
 | **Computer Vision** | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) |
 | **Big Data** | ![Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white) |
 | **Data Science** | ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square) |
@@ -504,13 +505,13 @@ print(f"🔗 Public URL: {public_url}")
 
 ```
 ┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐
-│  🚦 Intelligent     │   │  🏙️ Smart City      │   │  📹 Vehicle         │
-│  Traffic Systems     │   │  Infrastructure     │   │  Surveillance       │
+│  🚦 Intelligent     │  │  🏙️ Smart City      │   │  📹 Vehicle         │
+│  Traffic Systems    │   │  Infrastructure     │   │  Surveillance       │
 └─────────────────────┘   └─────────────────────┘   └─────────────────────┘
 
 ┌─────────────────────┐   ┌─────────────────────┐
-│  🅿️ Parking          │   │  📊 Traffic          │
-│  Monitoring          │   │  Analysis            │
+│  🅿️ Parking         │  │  📊 Traffic         │
+│  Monitoring         │   │  Analysis           │
 └─────────────────────┘   └─────────────────────┘
 ```
 
