@@ -1,71 +1,356 @@
-<div align="center">
+# 🚗 Vehicle Detection and Classification System  
+### Using Deep Learning and Big Data Analytics
 
-# 🚗 Vehicle Detection and Classification System
-
-**An intelligent, large-scale computer vision pipeline using Deep Learning and Big Data Analytics.**
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](#)
-[![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](#)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](#)
-
-</div>
-
-<br />
-
-## 📌 Project Overview
-This project implements an intelligent **Vehicle Detection and Classification System** to detect vehicles in images and classify them into distinct categories. By integrating **Apache Spark** for data processing and **Streamlit** for real-time public access via **Ngrok**, this system demonstrates how modern computer vision techniques can be scaled for real-world traffic and surveillance applications.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-DeepLearning-orange)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-ObjectDetection-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-green)
+![Apache Spark](https://img.shields.io/badge/ApacheSpark-BigData-yellow)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
 ---
 
-## 🎯 Key Features
-- **Multi-Vehicle Detection:** Robust bounding box generation using Ultralytics YOLOv8.
-- **Multi-Class Classification:** Transfer learning and fine-tuning via EfficientNetB0 to classify 5 distinct vehicle types.
-- **Big Data Processing:** Apache Spark integration for efficient filtering and handling of large-scale image datasets.
-- **Real-Time Web App:** Interactive Streamlit interface deployed publicly using Ngrok.
+# 📌 Overview
+
+This project implements an intelligent **Vehicle Detection and Classification System** using deep learning and big data technologies.
+
+The system detects vehicles in images using **YOLOv8**, classifies them using **EfficientNetB0**, and provides real-time predictions through a **Streamlit web application**.
+
+Apache Spark is used to efficiently process large-scale datasets.
+
+This project demonstrates how modern computer vision techniques can be applied to **real-world traffic monitoring and surveillance systems**.
 
 ---
 
-## 🧠 Models & Performance Metrics
+# 🎯 Objectives
 
-### 🚘 Vehicle Detection (YOLOv8s)
-- **Framework:** Ultralytics YOLO
-- **Input Size:** 640 × 640 | **Batch Size:** 16
-
-| Metric | Score |
-| :--- | :--- |
-| **Precision** | `0.9585` |
-| **Recall** | `0.9563` |
-| **mAP@0.5** | `0.9894` |
-| **mAP@0.5–0.95** | `0.8140` |
-
-### 🚗 Vehicle Classification (EfficientNetB0)
-- **Framework:** TensorFlow / Keras (ImageNet pretrained)
-- **Classes (5):** Bus, Car, Motorcycle, Truck, Van
-
-| Metric | Score |
-| :--- | :--- |
-| **Best Validation Accuracy** | `94.25%` |
-| **Final Accuracy** | `92.00%` |
-| **Macro F1-Score** | `0.92` |
-| **Weighted F1-Score** | `0.92` |
+- Detect vehicles in images using **YOLOv8**
+- Classify detected vehicles into multiple categories
+- Process large datasets using **Apache Spark**
+- Improve classification accuracy using **fine-tuning**
+- Deploy system using **Streamlit**
+- Enable real-time predictions via **Ngrok**
 
 ---
 
-## 🔄 Workflow Pipeline
+# 🧠 Models Used
+
+## 🚘 Vehicle Detection — YOLOv8
+
+| Parameter | Value |
+|----------|-------|
+| Model | YOLOv8s |
+| Task | Vehicle Detection |
+| Image Size | 640 × 640 |
+| Batch Size | 16 |
+
+### 📊 Detection Performance
+
+| Metric | Value |
+|-------|------|
+| Precision | **0.9585** |
+| Recall | **0.9563** |
+| mAP@0.5 | **0.9894** |
+| mAP@0.5–0.95 | **0.8140** |
+
+---
+
+## 🚗 Vehicle Classification — EfficientNetB0
+
+| Parameter | Value |
+|----------|-------|
+| Model | EfficientNetB0 |
+| Classes | 5 |
+| Training Type | Transfer Learning |
+| Fine-Tuning | Yes |
+
+### 📊 Classification Performance
+
+| Metric | Value |
+|-------|------|
+| Best Validation Accuracy | **94.25%** |
+| Final Accuracy | **92%** |
+| Macro F1-score | **0.92** |
+| Weighted F1-score | **0.92** |
+
+### Vehicle Classes
+
+- Bus  
+- Car  
+- Motorcycle  
+- Truck  
+- Van  
+
+---
+
+# 🖼️ Sample Results
+
+## 🚘 Detection Output
+
+*(Add screenshot here)* 
+---
+
+## 🚗 Classification Results
+
+*(Add screenshot here)*
+
+
+---
+
+## 📊 Confusion Matrix
+
+*(Add screenshot here)*
+
+
+---
+
+## 🖥️ Streamlit Interface
+
+*(Add screenshot here)*
+
+
+---
+
+# 📂 Project Structure
 
 ```text
-[ Dataset Loading ] 
+Vehicle-Detection-and-Classification/
+
+├── notebooks/
+│   └── Vehicle_Detection_and_Classification.ipynb
+
+├── app/
+│   └── streamlit_app.py
+
+├── models/
+│   ├── best_yolo_vehicle.pt
+│   └── vehicle_classifier_efficientnet_final.keras
+
+├── results/
+│   └── output_images/
+
+├── sample_images/
+│   ├── sample1.jpg
+│   ├── sample2.jpg
+
+├── vehicle_dataset.yaml
+├── class_indices.json
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 🔄 Workflow Pipeline
+
+```text
+1. Dataset Loading  
         ↓  
-[ Apache Spark Processing ] (Filtering & Optimization)
+2. Apache Spark Processing  
         ↓  
-[ Annotation Conversion ] 
+3. Annotation Conversion  
         ↓  
-[ YOLOv8 Detection Training ] 
+4. YOLOv8 Detection Training  
         ↓  
-[ EfficientNet Classification Training ] 
+5. EfficientNet Classification Training  
         ↓  
-[ Model Evaluation ] 
+6. Model Fine-Tuning  
         ↓  
-[ Streamlit & Ngrok Deployment ] 
+7. Model Evaluation  
+        ↓  
+8. Streamlit Deployment  
+```
+
+---
+
+# 📊 Dataset Information
+
+This project uses two datasets:
+
+## Vehicle Detection Dataset (VDset)
+
+Contains:
+
+- Vehicle images
+- Bounding box annotations
+- XML labels converted to YOLO format
+
+---
+
+## Vehicle Classification Dataset (VCset)
+
+Contains images from:
+
+- Bus  
+- Car  
+- Motorcycle  
+- Truck  
+- Van  
+
+---
+
+## Dataset Source
+
+🔗 https://zenodo.org/records/14792742
+
+---
+
+# ⚡ Apache Spark Usage
+
+Apache Spark is used to:
+
+- Load large image datasets
+- Filter invalid images
+- Improve processing performance
+- Handle big data efficiently
+
+---
+
+# 🚀 Installation
+
+## Step 1 — Clone Repository
+
+```bash
+git clone https://github.com/DMInaam/Vehicle-Detection-and-Classification.git
+
+cd Vehicle-Detection-and-Classification
+```
+---
+
+## Step 2 — Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+--- 
+
+## ▶️ Run the Streamlit App
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
+# 🌐 Public Deployment Using Ngrok
+
+```Python
+from pyngrok import ngrok
+
+public_url = ngrok.connect(8501)
+
+print(public_url)
+```
+---
+
+# 🖥️ Technologies Used
+
+- Python
+- TensorFlow / Keras
+- Ultralytics YOLOv8
+- OpenCV
+- NumPy
+- Apache Spark
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- Ngrok
+
+---
+
+# 🎯 Key Features
+* Multi-vehicle detection
+* Multi-class classification
+* Transfer learning implementation
+* Fine-tuning for improved accuracy
+* Big data processing using Spark
+* Real-time prediction system
+* Interactive Streamlit UI
+* Public web deployment
+
+---
+
+## 📊 Final Performance Summary
+
+### 🚘 Detection Model (YOLOv8)
+
+- **Model:** YOLOv8s  
+- **Precision:** 0.9585  
+- **Recall:** 0.9563  
+- **mAP@0.5:** 0.9894  
+- **mAP@0.5–0.95:** 0.8140  
+
+---
+
+### 🚗 Classification Model (EfficientNetB0)
+
+- **Model:** EfficientNetB0  
+- **Total Classes:** 5  
+- **Best Validation Accuracy:** 94.25%  
+- **Final Accuracy:** 92%  
+- **Macro F1-score:** 0.92  
+
+---
+
+## 🔮 Future Work
+
+Possible improvements to this project include:
+
+- Real-time video detection  
+- Multi-object tracking  
+- Vehicle counting system  
+- Traffic analytics dashboard  
+- Edge device deployment  
+- Cloud-based inference  
+
+---
+
+## 📌 Applications
+
+This system can be applied in:
+
+- Intelligent Traffic Systems  
+- Smart City Infrastructure  
+- Vehicle Surveillance Systems  
+- Parking Monitoring Systems  
+- Traffic Analysis Platforms  
+
+---
+
+## 🏁 Conclusion
+
+This project successfully developed a complete **vehicle detection and classification system** using modern deep learning techniques.
+
+YOLOv8 achieved strong detection performance with high precision and recall, while EfficientNetB0 provided accurate classification across five vehicle types. Fine-tuning significantly improved classification accuracy and model reliability.
+
+The integrated detection and classification pipeline demonstrates the effectiveness of deep learning and big data technologies in solving real-world computer vision problems.
+
+---
+
+## 👨‍💻 Author
+
+**Mohammed Inaam D**
+
+Vehicle Detection and Classification System  
+Deep Learning | Computer Vision | Big Data Analytics  
+
+🔗 **GitHub:**  
+https://github.com/DMInaam  
+
+---
+
+## ⭐ Acknowledgment
+
+**Dataset Source:**  
+
+Zenodo Vehicle Dataset  
+https://zenodo.org/records/14792742  
+
+---
+
+## 📜 License
+
+This project is for educational and research purposes.
+
+---
