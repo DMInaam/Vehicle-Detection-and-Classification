@@ -8,9 +8,15 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+[![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=yolo&logoColor=black)](https://docs.ultralytics.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-3.x-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org/)
+[![Google Colab](https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)](https://matplotlib.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Completed-2EA44F?style=for-the-badge)](https://github.com/DMInaam/Vehicle-Detection-and-Classification)
 [![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)](#-license)
 
@@ -132,20 +138,94 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 </table>
 
 <details>
-<summary>📊 <b>View Detection Results</b></summary>
+<summary>📊 <b>View Detection Training Curves</b></summary>
 <br/>
 
 <div align="center">
 
-**Detection Output Samples**
+**Training Metrics Overview**
 
-<img src="results/results.png" width="750" alt="YOLOv8 Detection Results"/>
+<img src="results/results.png" width="750" alt="YOLOv8 Training Results"/>
 
 <br/><br/>
 
+**Precision-Recall Curve**
+
+<img src="results/BoxPR_curve.png" width="600" alt="Precision-Recall Curve"/>
+
+<br/><br/>
+
+**F1-Confidence Curve**
+
+<img src="results/BoxF1_curve.png" width="600" alt="F1-Confidence Curve"/>
+
+<br/><br/>
+
+**Precision Curve**
+
+<img src="results/BoxP_curve.png" width="600" alt="Precision Curve"/>
+
+<br/><br/>
+
+**Recall Curve**
+
+<img src="results/BoxR_curve.png" width="600" alt="Recall Curve"/>
+
+</div>
+</details>
+
+<details>
+<summary>📋 <b>View Confusion Matrix & Class Distribution</b></summary>
+<br/>
+
+<div align="center">
+
 **Normalized Confusion Matrix**
 
-<img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix"/>
+<img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix (Normalized)"/>
+
+<br/><br/>
+
+**Confusion Matrix**
+
+<img src="results/confusion_matrix.png" width="500" alt="Detection Confusion Matrix"/>
+
+<br/><br/>
+
+**Dataset Label Distribution**
+
+<img src="results/labels.jpg" width="600" alt="Class Distribution"/>
+
+</div>
+</details>
+
+<details>
+<summary>🖼️ <b>View Training & Validation Samples</b></summary>
+<br/>
+
+<div align="center">
+
+**Training Batch Samples**
+
+<img src="results/train_batch0.jpg" width="700" alt="Training Batch 0"/>
+
+<br/><br/>
+
+<img src="results/train_batch1.jpg" width="700" alt="Training Batch 1"/>
+
+<br/><br/>
+
+<img src="results/train_batch2.jpg" width="700" alt="Training Batch 2"/>
+
+<br/><br/>
+
+**Validation — Ground Truth vs. Predictions**
+
+| Ground Truth | Predictions |
+|:------------:|:-----------:|
+| <img src="results/val_batch0_labels.jpg" width="400" alt="Val Batch 0 Labels"/> | <img src="results/val_batch0_pred.jpg" width="400" alt="Val Batch 0 Predictions"/> |
+| <img src="results/val_batch1_labels.jpg" width="400" alt="Val Batch 1 Labels"/> | <img src="results/val_batch1_pred.jpg" width="400" alt="Val Batch 1 Predictions"/> |
+| <img src="results/val_batch2_labels.jpg" width="400" alt="Val Batch 2 Labels"/> | <img src="results/val_batch2_pred.jpg" width="400" alt="Val Batch 2 Predictions"/> |
 
 </div>
 </details>
@@ -196,18 +276,43 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 </div>
 
 <details>
-<summary>📊 <b>View Classification Results</b></summary>
+<summary>📊 <b>View Classification Training Curves</b></summary>
 <br/>
 
 <div align="center">
 
-**Training & Validation Accuracy Curves**
+**Phase 1 — Transfer Learning Accuracy**
 
-<img src="results/accuracy_curve.png" width="600" alt="Classification Accuracy Curve"/>
+<img src="results/phase1_accuracy.png" width="600" alt="Phase 1 Training Accuracy"/>
 
 <br/><br/>
 
-**Classification Confusion Matrix**
+**Phase 2 — Fine-Tuning Accuracy**
+
+<img src="results/finetune_accuracy.png" width="600" alt="Fine-Tuning Accuracy"/>
+
+<br/><br/>
+
+**Combined Training & Validation Accuracy**
+
+<img src="results/accuracy_curve.png" width="600" alt="Combined Accuracy Curve"/>
+
+<br/><br/>
+
+**Training & Validation Loss**
+
+<img src="results/loss_curve.png" width="600" alt="Training & Validation Loss"/>
+
+</div>
+</details>
+
+<details>
+<summary>📋 <b>View Classification Confusion Matrix</b></summary>
+<br/>
+
+<div align="center">
+
+**EfficientNetB0 — Confusion Matrix**
 
 <img src="results/confusion_matrix_efficientNet.png" width="500" alt="Classification Confusion Matrix"/>
 
