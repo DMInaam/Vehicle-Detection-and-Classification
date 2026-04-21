@@ -24,6 +24,10 @@ __pycache__/
 *.h5
 *.ckpt
 *.pth
+*.pt
+*.keras
+*.pkl
+
 
 # Keep only final models
 !best_yolo_vehicle.pt
