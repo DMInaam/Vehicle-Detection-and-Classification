@@ -85,30 +85,47 @@ This project demonstrates how modern computer vision techniques can be applied t
 
 # 🖼️ Sample Results
 
-## 🚘 Detection Output
-
-*(Add screenshot here)* 
----
-
-## 🚗 Classification Results
-
-*(Add screenshot here)*
-
-
----
-
-## 📊 Confusion Matrix
-
-*(Add screenshot here)*
-
-
----
-
 ## 🖥️ Streamlit Interface
 
-*(Add screenshot here)*
+![Streamlit UI](results/d1.png)
 
+![Multi-Vehicle Classification](results/d2.png)
 
+---
+
+## 🚘 Vehicle Detection Output
+
+![YOLO Detection](results/results.png)
+
+---
+
+## 📊 Detection Confusion Matrix
+
+![YOLO Confusion Matrix](results/confusion_matrix_normalized.png)
+
+---
+
+## 📈 Detection Performance Curve
+
+![Precision Recall Curve](results/BoxPR_curve.png)
+
+---
+
+## 📈 Classification Accuracy
+
+![EfficientNet Accuracy](results/accuracy_curve.png)
+
+---
+
+## 📉 Classification Loss
+
+![EfficientNet Loss](results/loss_curve.png)
+
+---
+
+## 📊 Classification Confusion Matrix
+
+![EfficientNet Confusion Matrix](results/confusion_matrix_efficientNet.png)
 ---
 
 # 📂 Project Structure
