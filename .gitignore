@@ -1,6 +1,8 @@
 # Ignore dataset files
 datasets/
 data/
+images/
+labels/
 *.rar
 *.zip
 *.7z
@@ -47,3 +49,11 @@ env/
 
 # Ignore Spark temp
 spark-*
+
+# Training artifacts
+train_batch*.jpg
+val_batch*_labels.jpg
+val_batch*_pred.jpg
+
+# CSV logs
+*.csv

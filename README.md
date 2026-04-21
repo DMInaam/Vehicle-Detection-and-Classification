@@ -9,16 +9,10 @@
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Google Colab](https://img.shields.io/badge/Google_Colab-T4_GPU-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
-[![Keras](https://img.shields.io/badge/Keras-Deep_Learning-D00000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF?style=for-the-badge&logo=yolo&logoColor=black)](https://docs.ultralytics.com/)
 [![EfficientNet](https://img.shields.io/badge/EfficientNetB0-Transfer_Learning-8B5CF6?style=for-the-badge)](https://arxiv.org/abs/1905.11946)
-[![OpenCV](https://img.shields.io/badge/OpenCV-Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-Big_Data-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Ngrok](https://img.shields.io/badge/Ngrok-Tunnel-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)](https://ngrok.com/)
-[![NumPy](https://img.shields.io/badge/NumPy-Scientific-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Status-Completed-2EA44F?style=for-the-badge)](https://github.com/DMInaam/Vehicle-Detection-and-Classification)
 [![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)](#-license)
 
@@ -29,12 +23,6 @@
 <br/>
 
 *An end-to-end pipeline that detects vehicles using **YOLOv8**, classifies them with **EfficientNetB0**, processes data at scale with **Apache Spark**, and serves real-time predictions through a **Streamlit** web application.*
-
----
-
-[Overview](#-overview) · [Models & Results](#-models--performance) · [Quick Start](#-quick-start) · [Architecture](#-workflow-pipeline) · [Technologies](#-technologies-used) · [Future Work](#-future-work)
-
-</div>
 
 ---
 
@@ -346,7 +334,7 @@ This project utilizes two complementary datasets:
 
 **Dataset Label Statistics & Bounding Box Distribution**
 
-<img src="results/labels.jpg" width="750" alt="Dataset Label Statistics"/>
+<img src="results/labels.jpg" width="500" alt="Dataset Label Statistics"/>
 
 <br/><br/>
 
@@ -505,13 +493,13 @@ print(f"🔗 Public URL: {public_url}")
 
 ```
 ┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐
-│  🚦 Intelligent     │  │  🏙️ Smart City      │   │  📹 Vehicle         │
-│  Traffic Systems    │   │  Infrastructure     │   │  Surveillance       │
+│  🚦 Intelligent     │   │  🏙️ Smart City      │   │  📹 Vehicle         │
+│  Traffic Systems     │   │  Infrastructure     │   │  Surveillance       │
 └─────────────────────┘   └─────────────────────┘   └─────────────────────┘
 
 ┌─────────────────────┐   ┌─────────────────────┐
-│  🅿️ Parking         │  │  📊 Traffic         │
-│  Monitoring         │   │  Analysis           │
+│  🅿️ Parking          │   │  📊 Traffic          │
+│  Monitoring          │   │  Analysis            │
 └─────────────────────┘   └─────────────────────┘
 ```
 
