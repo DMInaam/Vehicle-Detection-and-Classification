@@ -9,7 +9,27 @@
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
 ---
+## 📑 Table of Contents
 
+- [📌 Overview](#-overview)
+- [🎯 Objectives](#-objectives)
+- [🧠 Models Used](#-models-used)
+- [🖼️ Sample Results](#️-sample-results)
+- [📂 Project Structure](#-project-structure)
+- [🔄 Workflow Pipeline](#-workflow-pipeline)
+- [📊 Dataset Information](#-dataset-information)
+- [⚡ Apache Spark Usage](#-apache-spark-usage)
+- [🚀 Installation](#-installation)
+- [▶️ Run the Streamlit App](#️-run-the-streamlit-app)
+- [🖥️ Technologies Used](#️-technologies-used)
+- [🎯 Key Features](#-key-features)
+- [📊 Final Performance Summary](#-final-performance-summary)
+- [🔮 Future Work](#-future-work)
+- [📌 Applications](#-applications)
+- [🏁 Conclusion](#-conclusion)
+- [👨‍💻 Author](#-author)
+
+---
 # 📌 Overview
 
 This project implements an intelligent **Vehicle Detection and Classification System** using deep learning and big data technologies.
@@ -82,7 +102,36 @@ This project demonstrates how modern computer vision techniques can be applied t
 - Van  
 
 ---
+# 🖼️ Sample Results
 
+## 🖥️ Streamlit Interface
+
+<img src="results/d1.png" width="900">
+
+---
+
+## 🚘 Vehicle Detection Output
+
+<img src="results/results.png" width="800">
+
+---
+
+## 📊 Detection Confusion Matrix
+
+<img src="results/confusion_matrix_normalized.png" width="500">
+
+---
+
+## 📈 Classification Accuracy
+
+<img src="results/accuracy_curve.png" width="600">
+
+---
+
+## 📊 Classification Confusion Matrix
+
+<img src="results/confusion_matrix_efficientNet.png" width="500">
+--
 # 🖼️ Sample Results
 
 ## 🖥️ Streamlit Interface
