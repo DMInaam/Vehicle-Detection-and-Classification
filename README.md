@@ -138,7 +138,7 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 </table>
 
 <details>
-<summary>📊 <b>View Detection Training Curves</b></summary>
+<summary>📊 <b>View Detection Results</b></summary>
 <br/>
 
 <div align="center">
@@ -155,67 +155,15 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 <br/><br/>
 
-**F1-Confidence Curve**
-
-<img src="results/BoxF1_curve.png" width="600" alt="F1-Confidence Curve"/>
-
-<br/><br/>
-
-**Precision Curve**
-
-<img src="results/BoxP_curve.png" width="600" alt="Precision Curve"/>
-
-<br/><br/>
-
-**Recall Curve**
-
-<img src="results/BoxR_curve.png" width="600" alt="Recall Curve"/>
-
-</div>
-</details>
-
-<details>
-<summary>📋 <b>View Confusion Matrix & Class Distribution</b></summary>
-<br/>
-
-<div align="center">
-
 **Normalized Confusion Matrix**
 
-<img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix (Normalized)"/>
+<img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix"/>
 
 <br/><br/>
 
-**Confusion Matrix**
+**Training Batch Sample**
 
-<img src="results/confusion_matrix.png" width="500" alt="Detection Confusion Matrix"/>
-
-<br/><br/>
-
-**Dataset Label Distribution**
-
-<img src="results/labels.jpg" width="600" alt="Class Distribution"/>
-
-</div>
-</details>
-
-<details>
-<summary>🖼️ <b>View Training & Validation Samples</b></summary>
-<br/>
-
-<div align="center">
-
-**Training Batch Samples**
-
-<img src="results/train_batch0.jpg" width="700" alt="Training Batch 0"/>
-
-<br/><br/>
-
-<img src="results/train_batch1.jpg" width="700" alt="Training Batch 1"/>
-
-<br/><br/>
-
-<img src="results/train_batch2.jpg" width="700" alt="Training Batch 2"/>
+<img src="results/train_batch0.jpg" width="600" alt="Training Batch Sample"/>
 
 <br/><br/>
 
@@ -224,8 +172,6 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 | Ground Truth | Predictions |
 |:------------:|:-----------:|
 | <img src="results/val_batch0_labels.jpg" width="400" alt="Val Batch 0 Labels"/> | <img src="results/val_batch0_pred.jpg" width="400" alt="Val Batch 0 Predictions"/> |
-| <img src="results/val_batch1_labels.jpg" width="400" alt="Val Batch 1 Labels"/> | <img src="results/val_batch1_pred.jpg" width="400" alt="Val Batch 1 Predictions"/> |
-| <img src="results/val_batch2_labels.jpg" width="400" alt="Val Batch 2 Labels"/> | <img src="results/val_batch2_pred.jpg" width="400" alt="Val Batch 2 Predictions"/> |
 
 </div>
 </details>
@@ -276,43 +222,24 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 </div>
 
 <details>
-<summary>📊 <b>View Classification Training Curves</b></summary>
+<summary>📊 <b>View Classification Results</b></summary>
 <br/>
 
 <div align="center">
 
-**Phase 1 — Transfer Learning Accuracy**
+**Training & Validation Accuracy**
 
-<img src="results/phase1_accuracy.png" width="600" alt="Phase 1 Training Accuracy"/>
-
-<br/><br/>
-
-**Phase 2 — Fine-Tuning Accuracy**
-
-<img src="results/finetune_accuracy.png" width="600" alt="Fine-Tuning Accuracy"/>
-
-<br/><br/>
-
-**Combined Training & Validation Accuracy**
-
-<img src="results/accuracy_curve.png" width="600" alt="Combined Accuracy Curve"/>
+<img src="results/accuracy_curve.png" width="600" alt="Accuracy Curve"/>
 
 <br/><br/>
 
 **Training & Validation Loss**
 
-<img src="results/loss_curve.png" width="600" alt="Training & Validation Loss"/>
+<img src="results/loss_curve.png" width="600" alt="Loss Curve"/>
 
-</div>
-</details>
+<br/><br/>
 
-<details>
-<summary>📋 <b>View Classification Confusion Matrix</b></summary>
-<br/>
-
-<div align="center">
-
-**EfficientNetB0 — Confusion Matrix**
+**Confusion Matrix**
 
 <img src="results/confusion_matrix_efficientNet.png" width="500" alt="Classification Confusion Matrix"/>
 
