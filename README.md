@@ -23,7 +23,7 @@
 <br/>
 
 *An end-to-end pipeline that detects vehicles using **YOLOv8**, classifies them with **EfficientNetB0**, processes data at scale with **Apache Spark**, and serves real-time predictions through a **Streamlit** web application.*
-
+</div>
 ---
 
 ## 📑 Table of Contents
