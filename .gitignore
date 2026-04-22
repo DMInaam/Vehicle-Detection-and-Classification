@@ -30,6 +30,7 @@ models/*
 *.keras
 *.pkl
 
+!models/.gitkeep
 
 # Ignore environment files
 .env
