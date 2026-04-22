@@ -14,7 +14,7 @@
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-Big_Data-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Status](https://img.shields.io/badge/Status-Completed-2EA44F?style=for-the-badge)](https://github.com/DMInaam/Vehicle-Detection-and-Classification)
-[![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)](#-license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <br/>
 
@@ -240,7 +240,13 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 </div>
 
 ---
+## 📥 Download Pretrained Models
 
+Due to file size limitations, trained models are available in GitHub Releases.
+
+🔗 Download here:  
+https://github.com/DMInaam/Vehicle-Detection-and-Classification/releases
+---
 ## 📂 Project Structure
 
 ```
@@ -568,7 +574,18 @@ The integrated pipeline — from Spark-powered data processing through model tra
 
 ## 📜 License
 
-This project is intended for **educational and research purposes** only.
+This project is licensed under the **MIT License**.
+
+You are free to:
+
+- Use the code  
+- Modify the code  
+- Distribute the code  
+- Use it for commercial purposes  
+
+as long as proper credit is given.
+
+See the [LICENSE](LICENSE) file for full license details.
 
 ---
 
