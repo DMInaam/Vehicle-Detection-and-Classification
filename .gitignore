@@ -2,7 +2,6 @@
 datasets/
 data/
 labels/
-models/
 *.rar
 *.zip
 *.7z
