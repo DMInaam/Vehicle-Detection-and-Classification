@@ -18,7 +18,7 @@
 
 <br/>
 
-<img src="results/d1.png" width="850" alt="Streamlit Application Interface"/>
+<img src="images/d1.png" width="850" alt="Streamlit Application Interface"/>
 
 <br/>
 
@@ -136,19 +136,19 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 **Training Metrics Overview**
 
-<img src="results/results.png" width="750" alt="YOLOv8 Training Results"/>
+<img src="images/detection/results.png" width="750" alt="YOLOv8 Training Results"/>
 
 <br/><br/>
 
 **Validation Predictions**
 
-<img src="results/val_batch0_pred.jpg" width="750" alt="YOLOv8 Validation Predictions"/>
+<img src="images/detection/val_batch0_pred.jpg" width="750" alt="YOLOv8 Validation Predictions"/>
 
 <br/><br/>
 
 **Normalized Confusion Matrix**
 
-<img src="results/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix"/>
+<img src="images/detection/confusion_matrix_normalized.png" width="500" alt="Detection Confusion Matrix"/>
 
 </div>
 </details>
@@ -206,19 +206,19 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 **Training & Validation Accuracy Curves**
 
-<img src="results/accuracy_curve.png" width="600" alt="Classification Accuracy Curve"/>
+<img src="images/classification/accuracy_curve.png" width="600" alt="Classification Accuracy Curve"/>
 
 <br/><br/>
 
 **Fine-Tuning Accuracy Improvement**
 
-<img src="results/finetune_accuracy.png" width="600" alt="Fine-Tuning Accuracy"/>
+<img src="images/classification/finetune_accuracy.png" width="600" alt="Fine-Tuning Accuracy"/>
 
 <br/><br/>
 
 **Classification Confusion Matrix**
 
-<img src="results/confusion_matrix_efficientNet.png" width="500" alt="Classification Confusion Matrix"/>
+<img src="images/classification/confusion_matrix_efficientNet.png" width="500" alt="Classification Confusion Matrix"/>
 
 </div>
 </details>
@@ -231,11 +231,11 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 
 ### Streamlit Application Interface
 
-<img src="results/d1.png" width="850" alt="Streamlit Interface — Upload"/>
+<img src="images/d1.png" width="850" alt="Streamlit Interface — Upload"/>
 
 <br/><br/>
 
-<img src="results/d2.png" width="850" alt="Streamlit Interface — Results"/>
+<img src="images/d2.png" width="850" alt="Streamlit Interface — Results"/>
 
 </div>
 
@@ -247,27 +247,61 @@ Modern traffic monitoring systems demand **accuracy**, **speed**, and **scalabil
 Vehicle-Detection-and-Classification/
 │
 ├── 📓 notebooks/
-│   └── Vehicle_Detection_and_Classification.ipynb   # Full training pipeline
+│   └── Vehicle_Detection_and_Classification.ipynb      # Full training pipeline
 │
 ├── 🌐 app/
-│   └── streamlit_app.py                             # Streamlit web application
+│   └── streamlit_app.py                                # Streamlit web application
 │
 ├── 🤖 models/
-│   ├── best_yolo_vehicle.pt                         # Trained YOLOv8 weights
-│   └── vehicle_classifier_efficientnet_final.keras   # Trained EfficientNetB0
+│   ├──classification/
+│   │   ├── efficientnet_epoch_20.keras                 # Phase-1 checkpoint
+│   │   └── efficientnet_finetune_epoch_05.keras        # Fine-tuned checkpoint
+│   │
+│   ├──detection/
+│   │   ├── best.pt                                     # Best YOLO model
+│   │   └── last.pt                                     # Final YOLO checkpoint
+│   │
+│   ├── best_yolo_vehicle.pt                            # Trained YOLOv8 weights
+│   ├── class_indices.json                              # Class label mappings                
+│   └── vehicle_classifier_efficientnet_final.keras     # Trained EfficientNetB0
 │
-├── 📊 results/
-│   └── output_images/                               # Detection & classification outputs
-│
-├── 🖼️ sample_images/
-│   ├── sample1.jpg                                  # Test image 1
-│   └── sample2.jpg                                  # Test image 2
-│
-├── vehicle_dataset.yaml        # YOLO dataset configuration
-├── class_indices.json          # Class label mappings
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-└── .gitignore                  # Git ignore rules
+├── 🖼️ images/
+│   ├──classification/                                  # Classification metrics
+│   │   ├── accuracy_curve.png                          # Accuracy plot
+│   │   ├── confusion_matrix_efficientNet.png           # Confusion matrix
+│   │   ├── finetune_accuracy.png                       # Fine-tuning accuracy
+│   │   ├── loss_curve.png                              # Loss plot
+│   │   └── phase1_accuracy.png                         # Phase-1 accuracy
+│   │
+│   ├──detection/                                       # Detection metrics
+│   │   ├── BoxF1_curve.png                             # F1 curve
+│   │   ├── BoxP_curve.png                              # Precision curve
+│   │   ├── BoxPR_curve.png                             # PR curve
+│   │   ├── BoxR_curve.png                              # Recall curve
+│   │   ├── confusion_matrix_normalized.png             # Normalized confusion matrix
+│   │   ├── confusion_matrix.png                        # confusion matrix
+│   │   ├── labels.jpg                                  # Label distribution
+│   │   ├── results.png                                 # Training results
+│   │   ├── train_batch0.jpg                            # Training sample
+│   │   ├── val_batch0_pred.jpg                         # Prediction sample
+│   │   └── val_batch0_labels.jpg                       # Ground-truth sample
+│   │                            
+│   ├──sample/                                          # Sample test images
+│   │   ├── 1.webp
+│   │   ├── 2.webp
+│   │   ├── 3.jpeg
+│   │   ├── 4.jpeg
+│   │   ├── 5.webp
+│   │   ├── 6.webp
+│   │   └── 7.png
+│   │
+│   ├── d1.png                                          # Streamlit UI (upload)
+│   └── d2.png                                          # Streamlit UI (results)
+│   
+├── vehicle_dataset.yaml                                # YOLO dataset configuration
+├── requirements.txt                                    # Python dependencies
+├── README.md                                           # Project documentation
+└── .gitignore                                          # Git ignore rules
 ```
 
 ---
@@ -334,7 +368,7 @@ This project utilizes two complementary datasets:
 
 **Dataset Label Statistics & Bounding Box Distribution**
 
-<img src="results/labels.jpg" width="500" alt="Dataset Label Statistics"/>
+<img src="images/detection/labels.jpg" width="500" alt="Dataset Label Statistics"/>
 
 <br/><br/>
 

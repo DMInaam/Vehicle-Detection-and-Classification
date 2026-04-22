@@ -1,0 +1,8 @@
+
+path: /content/datasets/Vehicle Detection Dataset (VDset)
+
+train: images
+val: images
+
+names:
+  0: vehicle

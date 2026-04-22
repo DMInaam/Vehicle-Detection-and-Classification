@@ -31,9 +31,13 @@ __pycache__/
 *.pkl
 
 
-# Keep only final models
+# Keep models
 !best_yolo_vehicle.pt
+!best.pt
+!last.pt
 !vehicle_classifier_efficientnet_final.keras
+!efficientnet_epoch_20.keras
+!efficientnet_finetune_epoch_05.keras
 
 # Ignore environment files
 .env
@@ -52,8 +56,12 @@ spark-*
 
 # Training artifacts
 train_batch*.jpg
-val_batch*_labels.jpg
-val_batch*_pred.jpg
+val_*.jpg
+!train_batch0.jpg
+!val_batch0_pred.jpg
+!val_batch0_labels.jpg
 
 # CSV logs
 *.csv
+
+args.yaml
