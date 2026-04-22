@@ -44,6 +44,7 @@
 - [📊 Final Performance Summary](#-final-performance-summary)
 - [🔮 Future Work](#-future-work)
 - [📌 Applications](#-applications)
+- [📘 Key Learnings](#-key-learnings)
 - [🏁 Conclusion](#-conclusion)
 - [👨‍💻 Author](#-author)
 - [📜 License](#-license)
@@ -536,6 +537,16 @@ print(f"🔗 Public URL: {public_url}")
 ```
 
 </div>
+
+---
+
+## 📘 Key Learnings
+
+- Implemented multi-stage deep learning pipelines
+- Applied transfer learning for classification tasks
+- Optimized dataset handling using Apache Spark
+- Designed scalable detection-classification workflows
+- Built real-time deployment interfaces using Streamlit
 
 ---
 
