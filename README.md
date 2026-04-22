@@ -253,16 +253,7 @@ Vehicle-Detection-and-Classification/
 │   └── streamlit_app.py                                # Streamlit web application
 │
 ├── 🤖 models/
-│   ├──classification/
-│   │   ├── efficientnet_epoch_20.keras                 # Phase-1 checkpoint
-│   │   └── efficientnet_finetune_epoch_05.keras        # Fine-tuned checkpoint
-│   │
-│   ├──detection/
-│   │   ├── best.pt                                     # Best YOLO model
-│   │   └── last.pt                                     # Final YOLO checkpoint
-│   │
-│   ├── best_yolo_vehicle.pt                            # Trained YOLOv8 weights
-│   ├── class_indices.json                              # Class label mappings                
+│   ├── best_yolo_vehicle.pt                            # Trained YOLOv8 weights           
 │   └── vehicle_classifier_efficientnet_final.keras     # Trained EfficientNetB0
 │
 ├── 🖼️ images/
@@ -299,6 +290,7 @@ Vehicle-Detection-and-Classification/
 │   └── d2.png                                          # Streamlit UI (results)
 │   
 ├── vehicle_dataset.yaml                                # YOLO dataset configuration
+├── class_indices.json                                  # Class label mappings     
 ├── requirements.txt                                    # Python dependencies
 ├── README.md                                           # Project documentation
 └── .gitignore                                          # Git ignore rules

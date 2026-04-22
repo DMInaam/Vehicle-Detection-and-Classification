@@ -22,6 +22,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Ignore large model checkpoints except final ones
+models/*
 *.h5
 *.ckpt
 *.pth
@@ -29,14 +30,6 @@ __pycache__/
 *.keras
 *.pkl
 
-
-# Keep models
-!best_yolo_vehicle.pt
-!best.pt
-!last.pt
-!vehicle_classifier_efficientnet_final.keras
-!efficientnet_epoch_20.keras
-!efficientnet_finetune_epoch_05.keras
 
 # Ignore environment files
 .env
